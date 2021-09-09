@@ -1,0 +1,204 @@
+// Header
+// ---------------------------------
+$font-size-l5: calc($base-font-size * 11 / 6);
+$font-size-l4: calc($base-font-size * 11 / 7);
+$font-size-l3: calc($base-font-size * 11 / 8);
+$font-size-l2: calc($base-font-size * 11 / 9);
+$font-size-l1: calc($base-font-size * 11 / 10);
+$font-size-m:  calc($base-font-size);
+$font-size-s1: calc($base-font-size * 11 / 12);
+$font-size-s2: calc($base-font-size * 11 / 13);
+$font-size-s3: calc($base-font-size * 11 / 14);
+
+h1 {
+  font-size: $font-size-l5;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 12);
+  margin-bottom: calc($base-font-size * 11 / 13);
+  margin-top: calc($base-font-size * 1);
+}
+
+h2 {
+  font-size: $font-size-l4;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 13);
+  margin-bottom: calc($base-font-size * 11 / 14);
+  margin-top: calc($base-font-size * 1.8);
+}
+
+h3 {
+  font-size: $font-size-l3;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 13);
+  margin-bottom: calc($base-font-size * 11 / 14);
+  margin-top: calc($base-font-size * 1.7);
+}
+
+h4 {
+  font-size: $font-size-l2;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 13);
+  margin-bottom: calc($base-font-size * 11 / 14);
+  margin-top: calc($base-font-size * 1.5);
+}
+
+h5 {
+  font-size: $font-size-l1;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 13);
+  margin-bottom: calc($base-font-size * 11 / 14);
+  margin-top: calc($base-font-size * 1.5);
+}
+
+h6 {
+  color: $text-soft;
+  font-size: $font-size-m;
+  font-weight: bold;
+  line-height: calc($base-line-height * 11 / 13);
+  margin-bottom: calc($base-font-size * 11 / 14);
+  margin-top: calc($base-font-size * 1.25);
+}
+
+// Paragraph
+// ---------------------------------
+p {
+  font-size: $font-size-m;
+  margin-bottom: calc($base-font-size * 11 / 15);
+  margin-top: calc($base-font-size * 1);
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  margin-top: calc($base-font-size * 0.5);
+}
+
+// Small
+// ---------------------------------
+small {
+  font-size: $font-size-s2;
+}
+
+// Link
+// ---------------------------------
+a {
+}
+
+// pre, code
+// ---------------------------------
+pre, code, kbd, samp {
+  color: $text-link;
+  font-family: monospace;
+  font-size: $font-size-s1;
+  letter-spacing: normal;
+  line-height: $base-line-height * 0.9;
+}
+
+pre {
+  background-color: #F2F2F2;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: $font-size-s2;
+  margin: 0 0.1rem;
+  overflow: scroll;
+  padding: 0.8rem 1.2rem;
+  vertical-align: text-bottom;
+}
+
+pre > code {
+}
+
+p > code {
+  background-color: #F2F2F2;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: $font-size-s2;
+  margin: 0 0.1rem;
+  padding: 0.8rem 1.2rem;
+  vertical-align: text-bottom;
+}
+
+// blockquote
+// ---------------------------------
+blockquote {
+  & > p {
+  }
+}
+
+
+// List
+// ---------------------------------
+ul {
+}
+
+ol {
+}
+
+ol > li, ul > li {
+}
+
+// Table
+// ---------------------------------
+table {
+  background-color: $white;
+  border-collapse: collapse;
+  border: $border;
+  margin-bottom: $base-font-size * 1;
+  margin-top: $base-font-size * 0.75;
+  padding: 0;
+  table-layout: auto;
+  width: 100%;
+  word-break: initial;
+
+  tr {
+    border: $border;
+    padding: 0.4rem;
+    text-align: left;
+
+    &:nth-child(2n) {
+      background-color: $gray1;
+    }
+  }
+
+  th {
+    padding: 0.4rem;
+  }
+
+  td {
+    padding: 0.6rem;
+  }
+
+  thead {
+    background-color: $gray1;
+
+    tr {
+    }
+    th {
+    }
+  }
+
+  tbody {
+    tr {
+    }
+    th {
+    }
+    td {
+    }
+    th, td {
+    }
+  }
+}
+
+// Horizontal Rule
+// ---------------------------------
+hr {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: $border;
+}
+
+// Decoration
+// ---------------------------------
+em {
+}
+
+strong {
+  font-weight: 700;
+}

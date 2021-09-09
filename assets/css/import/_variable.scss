@@ -1,0 +1,30 @@
+// Color
+// ---------------------------------
+$text: #444444;
+$text-soft: lighten($text, 20%);
+$text-link: #4183C4;
+$text-link-hover: darken($text-link, 20%);
+
+$white: #FFFFFF;
+$gray1: darken($white, 3.5%);
+$gray2: darken($white, 8%);
+
+$main-color:  #5EB954;
+$main-accent: darken($main-color, 18.5%);
+$main-soft:   lighten($main-color, 21%);
+$main-exSoft: lighten($main-color, 42%);
+
+// Base Font
+// ---------------------------------
+$base-font-size: 1rem;
+$base-line-height: 1.8;
+
+// Grid
+// ---------------------------------
+$clumnWidth: 72px;
+$clumnGap: 16px;
+
+// Border
+// ---------------------------------
+$border: 1px solid #CCCCCC;
+$border-radius: 4px;

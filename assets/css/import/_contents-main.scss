@@ -1,0 +1,99 @@
+// =========================================================
+//     m-contents-main
+// =========================================================
+.m-contents-main {
+  &-header {
+    padding-left: $clumnGap;
+    padding-right: $clumnGap;
+    margin-bottom: 3rem;
+
+    &-title {
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: (($clumnWidth * 10) + ($clumnGap * 7));
+    }
+
+    &-meta {
+      font-size: 75%;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: (($clumnWidth * 10) + ($clumnGap * 7));
+
+      &-time {
+        color: $text-soft;
+      }
+    }
+  }
+
+  &-eyecatch {
+    margin: 1.2rem 0;
+    text-align: center;
+  }
+
+  &-body {
+    padding-bottom: 3em;
+    padding-left: $clumnGap;
+    padding-right: $clumnGap;
+    text-align: justify;
+    max-width: (($clumnWidth * 10) + ($clumnGap * 9));
+    margin-left: auto;
+    margin-right: auto;
+
+    p, h1, h2, h3, h4, h5, h6, ol, ul, pre, dl, table {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: (($clumnWidth * 10) + ($clumnGap * 9));
+    }
+
+    h1 {
+      border-bottom: $border;
+    }
+
+    hr {
+      margin-bottom: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.5em;
+      max-width: (($clumnWidth * 4) + ($clumnGap * 3));
+    }
+
+    img {
+      margin-bottom: $base-font-size * 0.25;
+      margin-top: $base-font-size * 0.5;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .img-responsive {
+      display: block;
+      margin-left: -16px;
+      margin-right: -16px;
+      max-width: none;
+      text-align: center;
+    }
+
+    .youtube {
+      max-width: none;
+      padding-top: 56.25%;
+      position: relative;
+      width: 100%;
+
+      iframe {
+        height: 100% !important;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100% !important;
+      }
+    }
+  }
+
+  .twitter-tweet {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: calc(1.5rem - 10px);
+    text-align: center;
+  }
+}

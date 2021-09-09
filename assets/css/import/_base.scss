@@ -1,0 +1,61 @@
+// =========================================================
+//     Base
+// =========================================================
+* {
+  &, &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  color: $text;
+  font-size: calc(12px + 0.24vw);
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  color: $text-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-link-hover;
+    text-decoration: underline;
+  }
+
+  &:focus {
+  }
+
+  &:active {
+  }
+
+  &:visited {
+  }
+}
+
+::selection {
+}
+
+ul, ol {
+  letter-spacing: -0.4em;
+
+  li {
+    letter-spacing: normal;
+  }
+}
