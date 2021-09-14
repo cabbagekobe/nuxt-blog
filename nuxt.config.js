@@ -46,7 +46,15 @@ export default {
   components: true,
 
   buildModules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: [
+      '@/assets/css/_typo.scss',
+      '@/assets/css/_variable.scss',
+    ]
+  },
 
   modules: [
     '@nuxtjs/axios',

@@ -1,74 +1,74 @@
 // Header
 // ---------------------------------
-$font-size-l5: calc($base-font-size * 11 / 6);
-$font-size-l4: calc($base-font-size * 11 / 7);
-$font-size-l3: calc($base-font-size * 11 / 8);
-$font-size-l2: calc($base-font-size * 11 / 9);
-$font-size-l1: calc($base-font-size * 11 / 10);
-$font-size-m:  calc($base-font-size);
-$font-size-s1: calc($base-font-size * 11 / 12);
-$font-size-s2: calc($base-font-size * 11 / 13);
-$font-size-s3: calc($base-font-size * 11 / 14);
+$font-size-l5: math.div($base-font-size * 11, 6);
+$font-size-l4: math.div($base-font-size * 11, 7);
+$font-size-l3: math.div($base-font-size * 11, 8);
+$font-size-l2: math.div($base-font-size * 11, 9);
+$font-size-l1: math.div($base-font-size * 11, 10);
+$font-size-m:  $base-font-size;
+$font-size-s1: math.div($base-font-size * 11, 12);
+$font-size-s2: math.div($base-font-size * 11, 13);
+$font-size-s3: math.div($base-font-size * 11, 14);
 
 h1 {
   font-size: $font-size-l5;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 12);
-  margin-bottom: calc($base-font-size * 11 / 13);
-  margin-top: calc($base-font-size * 1);
+  line-height: math.div($base-line-height * 11, 12);
+  margin-bottom: math.div($base-font-size * 11, 13);
+  margin-top: $base-font-size * 1;
 }
 
 h2 {
   font-size: $font-size-l4;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 13);
-  margin-bottom: calc($base-font-size * 11 / 14);
-  margin-top: calc($base-font-size * 1.8);
+  line-height: math.div($base-line-height * 11, 13);
+  margin-bottom: math.div($base-font-size * 11, 14);
+  margin-top: $base-font-size * 1.8;
 }
 
 h3 {
   font-size: $font-size-l3;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 13);
-  margin-bottom: calc($base-font-size * 11 / 14);
-  margin-top: calc($base-font-size * 1.7);
+  line-height: math.div($base-line-height * 11, 13);
+  margin-bottom: math.div($base-font-size * 11, 14);
+  margin-top: $base-font-size * 1.6;
 }
 
 h4 {
   font-size: $font-size-l2;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 13);
-  margin-bottom: calc($base-font-size * 11 / 14);
-  margin-top: calc($base-font-size * 1.5);
+  line-height: math.div($base-line-height * 11, 13);
+  margin-bottom: math.div($base-font-size * 11, 14);
+  margin-top: $base-font-size * 1.4;
 }
 
 h5 {
   font-size: $font-size-l1;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 13);
-  margin-bottom: calc($base-font-size * 11 / 14);
-  margin-top: calc($base-font-size * 1.5);
+  line-height: math.div($base-line-height * 11, 13);
+  margin-bottom: math.div($base-font-size * 11, 14);
+  margin-top: $base-font-size * 1.4;
 }
 
 h6 {
   color: $text-soft;
   font-size: $font-size-m;
   font-weight: bold;
-  line-height: calc($base-line-height * 11 / 13);
-  margin-bottom: calc($base-font-size * 11 / 14);
-  margin-top: calc($base-font-size * 1.25);
+  line-height: math.div($base-line-height * 11, 13);
+  margin-bottom: math.div($base-font-size * 11, 14);
+  margin-top: $base-font-size * 1.25;
 }
 
 // Paragraph
 // ---------------------------------
 p {
   font-size: $font-size-m;
-  margin-bottom: calc($base-font-size * 11 / 15);
-  margin-top: calc($base-font-size * 1);
+  margin-bottom: math.div($base-font-size * 11, 15);
+  margin-top: $base-font-size * 1;
 }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-  margin-top: calc($base-font-size * 0.5);
+  margin-top: $base-font-size * 0.5;
 }
 
 // Small
@@ -93,12 +93,18 @@ pre, code, kbd, samp {
 }
 
 pre {
-  background-color: #F2F2F2;
+  background-color: $gray1;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   font-size: $font-size-s2;
-  margin: 0 0.1rem;
+  margin-bottom: 0;
+  margin-left: $base-font-size * 0.25;
+  margin-right: $base-font-size * 0.25;
+  margin-top: 0;
   overflow: scroll;
-  padding: 0.1rem 0.4rem;
+  padding-bottom: $base-font-size * 0.25;
+  padding-left: $base-font-size * 0.75;
+  padding-right: $base-font-size * 0.75;
+  padding-top: $base-font-size * 0.25;
   vertical-align: text-bottom;
 }
 
@@ -106,11 +112,18 @@ pre > code {
 }
 
 p > code {
-  background-color: #F2F2F2;
+  background-color: $gray1;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   font-size: $font-size-s2;
-  margin: 0 0.1rem;
-  padding: 0.1rem 0.4rem;
+  margin-bottom: 0;
+  margin-left: $base-font-size * 0.25;
+  margin-right: $base-font-size * 0.25;
+  margin-top: 0;
+  overflow: scroll;
+  padding-bottom: $base-font-size * 0.25;
+  padding-left: $base-font-size * 0.75;
+  padding-right: $base-font-size * 0.75;
+  padding-top: $base-font-size * 0.25;
   vertical-align: text-bottom;
 }
 
@@ -148,7 +161,10 @@ table {
 
   tr {
     border: $border;
-    padding: 0.2rem;
+    padding-bottom: $base-font-size * 0.25;
+    padding-left: $base-font-size * 0.25;
+    padding-right: $base-font-size * 0.25;
+    padding-top: $base-font-size * 0.25;
     text-align: left;
 
     &:nth-child(2n) {
@@ -157,11 +173,17 @@ table {
   }
 
   th {
-    padding: 0.4rem;
+    padding-bottom: $base-font-size * 0.45;
+    padding-left: $base-font-size * 0.45;
+    padding-right: $base-font-size * 0.45;
+    padding-top: $base-font-size * 0.45;
   }
 
   td {
-    padding: 0.6rem;
+    padding-bottom: $base-font-size * 0.75;
+    padding-left: $base-font-size * 0.75;
+    padding-right: $base-font-size * 0.75;
+    padding-top: $base-font-size * 0.75;
   }
 
   thead {
