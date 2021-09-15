@@ -100,7 +100,7 @@ pre {
   margin-left: $base-font-size * 0.25;
   margin-right: $base-font-size * 0.25;
   margin-top: 0;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: $base-font-size * 0.25;
   padding-left: $base-font-size * 0.75;
   padding-right: $base-font-size * 0.75;
@@ -119,7 +119,7 @@ p > code {
   margin-left: $base-font-size * 0.25;
   margin-right: $base-font-size * 0.25;
   margin-top: 0;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: $base-font-size * 0.25;
   padding-left: $base-font-size * 0.75;
   padding-right: $base-font-size * 0.75;
