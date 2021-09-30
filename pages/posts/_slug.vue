@@ -1,5 +1,5 @@
 <template>
-  <main class="m-contents-main" role="main">
+  <div>
     <header class="m-contents-main-header">
       <div class="m-contents-main-header-meta">
         <time class="m-contents-main-header-meta-time">
@@ -12,14 +12,18 @@
       </h1>
     </header>
 
-    <div>
+    <div v-if="post.image" class="m-contents-main-eyecatch">
       <img :src="post.image" />
+
+      <p v-if="post.description" class="m-contents-main-eyecatch-description">
+        {{post.description}}
+      </p>
     </div>
 
     <div class="m-contents-main-body">
       <nuxt-content :document="post" />
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

@@ -3,15 +3,15 @@
 // =========================================================
 .m-contents-main {
   &-header {
+    margin-bottom: 3rem;
     padding-left: $clumnGap;
     padding-right: $clumnGap;
-    margin-bottom: 3rem;
 
     &-title {
       margin-bottom: 0;
-      margin-top: 0;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 0;
       max-width: (($clumnWidth * 10) + ($clumnGap * 7));
     }
 
@@ -34,13 +34,13 @@
   }
 
   &-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: (($clumnWidth * 10) + ($clumnGap * 9));
     padding-bottom: 3em;
     padding-left: $clumnGap;
     padding-right: $clumnGap;
     text-align: justify;
-    max-width: (($clumnWidth * 10) + ($clumnGap * 9));
-    margin-left: auto;
-    margin-right: auto;
 
     p, h1, h2, h3, h4, h5, h6, ol, ul, pre, dl, table {
       margin-left: auto;
@@ -61,9 +61,9 @@
     }
 
     img {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
       margin-bottom: $base-font-size * 0.25;
       margin-top: $base-font-size * 0.5;
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
     }
 
     .img-responsive {
@@ -75,6 +75,7 @@
     }
 
     .youtube {
+      margin-bottom: $base-font-size * 2.25;
       max-width: none;
       padding-top: 56.25%;
       position: relative;
@@ -87,6 +88,16 @@
         top: 0;
         width: 100% !important;
       }
+    }
+
+    figure {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .youtube + figcaption {
+      margin-top: -($base-font-size * 2.25);
+      text-align: center;
     }
   }
 
