@@ -47,6 +47,7 @@ export default {
 
   buildModules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics',
   ],
 
   styleResources: {
@@ -66,5 +67,15 @@ export default {
   content: {},
 
   build: {
+  },
+
+  googleAnalytics: {
+    id: 'UA-28643533-1'
+  },
+
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: 'UA-28643533-1'
+    }
   }
 }
