@@ -3,7 +3,6 @@ title: 家に転がっているMacBookを簡単にサーバにしておく
 date: 2021-01-31T14:28:12.263Z
 ---
 
-
 家に転がっているMacBookを簡単にサーバにしておく
 -----------------------------------------------
 
@@ -17,17 +16,30 @@ date: 2021-01-31T14:28:12.263Z
 yes | sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
 
 # Mac系列にUbuntu系のディストリをいれて下記のエラーが表示される場合 sudo su -以降のコマンドを入れる
-Failed to Set MokListRT: Invalid Parameter
-Could not create mokListRT: Invalid Parameter
-Importing MOK states has failed: import_mok_state() failed: Invalid Parameter
-Continuing boot since secure mode is disabled.
+# grubx64.efiをshimx64.efiにコピーして置き換える必要がある。
+> Failed to Set MokListRT: Invalid Parameter
+> Could not create mokListRT: Invalid Parameter
+> Importing MOK states has failed: import_mok_state() failed: Invalid Parameter
+> Continuing boot since secure mode is disabled.
 
 sudo su -
 cd /boot/efi/EFI/ubuntu
 cp grubx64.efi shimx64.efi
+sudo apt remove --purge shim shim-signed
+sudo update-grub2
 reboot
 
-# grubx64.efiをshimx64.efiにコピーして置き換える必要がある。
+# tailscale
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+sudo apt update
+sudo apt install tailscale
+sudo tailscale up
+sudo tailscaled
+sudo systemctl enable --now tailscale
+
+# SSHクライアントのインストール
+sudo apt install openssh-server
 
 # SSHキーの登録
 curl https://github.com/cabbagekobe.keys >> ~/.ssh/authorized_keys
