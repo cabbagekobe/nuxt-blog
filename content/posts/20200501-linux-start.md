@@ -76,6 +76,9 @@ date: 2020-05-01
     sudo apt install vim-gtk3
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+    # Sushi（gnome-sushi）のインストール
+    sudo apt install gnome-sushi unoconv
+
     # ファイラーのインストール
     sudo apt install ranger
     ranger --copy-config=all
